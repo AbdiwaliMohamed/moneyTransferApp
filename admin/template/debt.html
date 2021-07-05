@@ -1,0 +1,186 @@
+<header >
+    <!-- Sidebar -->
+    <nav  id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <a ui-sref="app.home" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>dashboard</span>
+                </a>
+                <a ui-sref="app.send" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-chart-area fa-fw me-3"></i><span>Send Money</span>
+                </a>
+                <a ui-sref="app.received" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-lock fa-fw me-3"></i><span>Receive Money</span></a>
+                <a ui-sref="app.credit" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-chart-line fa-fw me-3"></i><span>Cred Money</span></a>
+                <a ui-sref="app.debt" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="fas fa-chart-pie fa-fw me-3"></i><span>Debt Money</span>
+                </a>
+                <a ui-sref="app.cust" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-chart-bar fa-fw me-3"></i><span>Customers</span></a>
+                <a ui-sref="app.report" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-globe fa-fw me-3"></i><span>Report</span></a>
+                <a ui-sref="app.comm" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-building fa-fw me-3"></i><span>Commission</span></a>
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light  fixed-top" style="background-color: #48d813">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#sidebarMenu"
+                    aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <h3 style="color:blue; font-weight: bold">Taaj Logo</h3>
+            </a>
+            <!-- Search form -->
+            <form class="d-none d-md-flex input-group w-auto my-auto">
+                <input autocomplete="off" type="search" class="form-control rounded"
+                       placeholder='Search ......................' style="min-width: 225px" />
+                <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
+                <h3 style="color:blue; font-weight: bold">Taaj money transfer company</h3>
+
+            </form>
+
+            <!-- Right links -->
+            <ul class="navbar-nav ms-auto d-flex flex-row">
+                <!-- Notification dropdown -->
+
+                <!-- Icon -->
+
+                <!-- Icon -->
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+
+                <!-- Icon dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
+                       data-mdb-toggle="dropdown" aria-expanded="false">
+                        <i class="somalia flag m-0"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English
+                                <i class="fa fa-check text-success ms-2"></i></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Avatar -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                       id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
+                             alt="" loading="lazy" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">My profile</a></li>
+                        <li><a class="dropdown-item" ui-sref="app.login">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+</header>
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+        <!--Section: Sales Performance KPIs-->
+        <section class="mb-4">
+            <div class="card">
+                <div class="card-header text-center py-3">
+                    <h5 class="mb-0 text-center">
+                        <strong>Report ka lacagaha daymaha ku maqan (Debt Money)</strong>
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <input autocomplete="off" type="search" class="form-control rounded"
+                           placeholder='Search ......................' style="min-width: 225px" ng-model="phone"/>
+                    <div class="table-responsive">
+                        <table class="table table-hover text-nowrap" id="download">
+                            <thead class="table-hover">
+                            <tr  style="font-weight: bolder; font-size: 18px; color: black">
+                                <th scope="col">No</th>
+                                <th scope="col" ng-click="sortComment='name'">Name</th>
+                                <th scope="col" >Phone</th>
+                                <th scope="col">Address </th>
+                                <th scope="col" ng-click="sortComment='-debt'">Debt Money </th>
+                                <th scope="col" ng-click="sortComment='-date'">Date</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+
+
+
+
+                            </tr>
+                            </thead>
+                            <tbody  style="font-size: 16px;font-weight: bold; color: black">
+                            <tr ng-repeat="receive1 in debts |orderBy:sortComment  | filter:phone" >
+                                <td>
+                      <span class="text-danger">
+                        <i class=""></i><span>{{$index+1}}</span>
+                      </span>
+                                </td>
+                                <td>
+                      <span class="">
+                        <i class=""></i><span>{{receive1.name}}</span>
+                      </span>
+                                </td>
+                                <td>
+                      <span class="text-black">
+                        <i class=""></i><span>{{receive1.phone}}</span>
+                      </span>
+                                </td>
+                                <td>
+                      <span class="text-black">
+                        <i class=""></i><span>{{receive1.address}}</span>
+                      </span>
+                                </td>
+
+
+                                <td>
+                      <span class="text-info">
+                        <i class=""></i><span>{{receive1.debt}}</span>
+                      </span>
+                                </td>
+                                <td>
+                      <span class="text-info">
+                        <i class=""></i><span>{{receive1.date}}</span>
+                      </span>
+                                </td>
+                                <td>
+                                    <button  ng-click="$event.PreventDefault(); " class="btn basic-demo btn-info" style="width: 100%;padding: 10px;">Edit</button>
+
+                                </td>
+                                <td>
+                                    <div class="">
+                                        <a href="#">
+                                            <i class="fa fa-trash" aria-hidden="true" style="color: red;text-align: center;font-size:20px"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div  style="text-align: center;margin-top: 10px">
+                        <button id="download1" class="btn btn-lg btn-danger clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                    </div>                </div>
+            </div>
+        </section>
+
+    </div>
+</main>

@@ -1,0 +1,39 @@
+<div class="modal-header bg-info">
+    Modify Customer
+</div>
+<div class="modal-body">
+    <form class="well" ng-submit="updateCust()">
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" ng-model="selectedMeal.meal" required>
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="number" class="form-control" ng-model="selectedMeal.price" required>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label>Address</label>
+                <textarea class="form-control" ng-model="selectedMeal.descr" required></textarea>
+            </div>
+        <div class="form-group">
+            <label>Send</label>
+            <input type="number" class="form-control" ng-model="selectedMeal.price" required>
+        </div>
+        <div class="form-group">
+            <label>receive</label>
+            <input type="number" class="form-control" ng-model="selectedMeal.price" required>
+        </div>
+        <div class="form-group">
+            <label>debt</label>
+            <input type="number" class="form-control" ng-model="selectedMeal.price" required>
+        </div>
+        <div class="form-group">
+            <label>credit</label>
+            <input type="number" class="form-control" ng-model="selectedMeal.price" required>
+        </div>
+
+        <button class="btn btn-success">Update</button>
+        </div>
+    </form>
+</div>

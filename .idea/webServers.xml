@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6614553f-6e5b-49b9-9518-496f76ceaa2c" name="taaj" url="http://localhost/taaj_app">
+        <fileTransfer port="0" mountedRoot="C:\AppServ\www\taaj_app" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
